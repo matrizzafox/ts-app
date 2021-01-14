@@ -1,4 +1,4 @@
-import { actionsTypes, reducerActionAdd, reducerActionDelete, reducerActionSet, TodoItem } from "../../../../helpers/interfaces";
+import { actionsTypes, reducerActionAdd, reducerActionDelete, reducerActionSet, TodoItem } from "../../../../helpers/types";
 
 export const setTodoAction = (payload: TodoItem[] | []): reducerActionSet => {
     return {

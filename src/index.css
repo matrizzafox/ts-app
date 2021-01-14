@@ -11,6 +11,7 @@ body.light {
   --background: #f5f5f5;
   --border: #c7c7c7;
   --primary: #4d88e0;
+  --primary-rgba: rgba(77, 136, 224, 0.25);
   --success: #5dcb8e;
   --error: #e8235e;
   --yellow: #f5a623;
@@ -25,6 +26,7 @@ body {
   --background: #222831;
   --border: #3a4750;
   --primary: #ff5722;
+  --primary-rgba: rgba(255, 86, 34, 0.25);
   --success: #5dcb8e;
   --error: #e8235e;
   --yellow: #f5a623;

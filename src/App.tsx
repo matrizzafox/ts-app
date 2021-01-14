@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Context } from './helpers/context'
 import {getTheme, setTheme  } from './helpers/theme'
-import { TodoItem } from './helpers/interfaces'
+import { TodoItem } from './helpers/types'
 
 import AddTodoField from './components/AddTodoField'
 import Header from './components/Header'

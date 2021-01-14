@@ -1,4 +1,4 @@
-import { reducerState, reducerActions, actionsTypes, TodoItem } from '../../../helpers/interfaces'
+import { reducerState, reducerActions, actionsTypes, TodoItem } from '../../../helpers/types'
 
 export const reducer = (state: reducerState, action: reducerActions): reducerState => {
     switch (action.type) {

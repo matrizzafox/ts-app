@@ -1,7 +1,7 @@
 import React, { ChangeEvent, FormEvent, SetStateAction } from 'react'
 import { v4 as uuidv4 } from 'uuid'
 
-import { TodoItem } from '../../helpers/interfaces'
+import { TodoItem } from '../../helpers/types'
 
 import './styles.css'
 
@@ -18,7 +18,8 @@ const AddTodoField: React.FC<AddTodoProps> = React.memo(({ onAddTodo }): React.R
         onAddTodo({
             id: uuidv4(),
             title: value,
-            completed: false
+            completed: false,
+            completedAt: undefined
         })
         setValue('')
     }

@@ -1,7 +1,8 @@
 export type TodoItem = {
     id: string,
     title: string,
-    completed: boolean
+    completed: boolean,
+    completedAt: string | undefined
 }
 
 export enum actionsTypes  {
@@ -31,3 +32,8 @@ export type reducerActionDelete = {
 }
 
 export type reducerActions = reducerActionAdd | reducerActionSet | reducerActionDelete
+
+export type editableTodo = {
+    isEditing: boolean,
+    value: string
+}

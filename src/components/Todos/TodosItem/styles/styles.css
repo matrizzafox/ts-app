@@ -1,0 +1,67 @@
+.todos__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 50px;
+    margin-bottom: 10px;
+    background-color: var(--accent-1);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 10px;
+    transition: background-color 0.2s linear, padding .2s linear, opacity .5s ease-in, transform .5s linear;
+    position: relative;
+}
+
+.todos__item.completed {
+    text-decoration: line-through;
+    background-color: var(--primary);
+    color: var(--primary-color);
+    padding-bottom: 35px;
+}
+
+.todos__item__content {
+    display: flex;
+    width: 100%;
+}
+
+.todos__item__actions {
+    display: flex;
+}
+
+.todos__item__title {
+    padding: 0 10px;
+    width: 100%;
+}
+
+.todo__item__input {
+    border: none;
+    background: none;
+    color:inherit;
+    outline: none;
+    width: 100%;
+    border-bottom: 2px solid var(--accent-2);
+    padding: 0 0 5px 0; 
+    transition: border-bottom-color .2s linear;
+}
+
+.todo__item__input:focus {
+    border-bottom-color: var(--primary);
+}
+
+.completed .todo__item__input {
+    border-bottom-color: var(--primary);
+}
+
+.completed .todo__item__input:focus {
+    border-bottom: 2px solid var(--accent-2);
+}
+
+.todo_item_timestamp {
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    font-style: italic;
+}
+
+@import 'checkbox.css';
+@import 'actions.css';
