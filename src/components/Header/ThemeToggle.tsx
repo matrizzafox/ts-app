@@ -10,8 +10,10 @@ const ThemeToggle: React.FC = (): React.ReactElement => {
     const handleToggleTheme = () => {
         if(toggleTheme)
         if(theme === 'dark') {
+            document.querySelector("meta[name=theme-color]")?.setAttribute("content", '#f5f5f5')
             toggleTheme('light')
         } else {
+            document.querySelector("meta[name=theme-color]")?.setAttribute("content", '#222831')
             toggleTheme('dark')
         }
     }
