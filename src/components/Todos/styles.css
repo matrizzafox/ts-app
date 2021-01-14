@@ -1,0 +1,25 @@
+.todos {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+}
+
+.todos__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.todos__item.completed {
+    text-decoration: line-through;
+}
+
+.todos__item__content {
+    display: flex;
+}
+
+.todos__item__checkbox {
+    margin-right: 20px;
+}

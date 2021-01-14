@@ -1,24 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import { Context } from './helpers/context'
+import {getTheme, setTheme  } from './helpers/theme'
+import { TodoItem } from './helpers/interfaces'
+
+import AddTodoField from './components/AddTodoField'
+import Header from './components/Header'
+import Todos from './components/Todos';
+
+const App: React.FC = (): React.ReactElement => {
+
+  const [theme, toggleTheme] = React.useState<string>(getTheme());
+  const [newTodo, addNewTodo] = React.useState<TodoItem | null>(null);
+
+  React.useEffect(() => {
+    setTheme(theme)
+  }, [theme])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Context.Provider value={{
+        theme,
+        toggleTheme
+      }}>
+        <Header />
+        <AddTodoField onAddTodo={addNewTodo}/>
+        <Todos newTodo={newTodo} />
+      </Context.Provider>
+      
     </div>
   );
 }

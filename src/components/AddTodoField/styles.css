@@ -1,0 +1,40 @@
+.add_todo {
+    position: relative;
+    display: flex;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--border);
+}
+
+.add_todo input {
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--border);
+    background-color: var(--accent-1);
+    padding: 1rem 1.2rem;
+    transition: border-color 200ms;
+    border-radius: 5px;
+    outline: none;
+    color: var(--color);
+}
+
+.add_todo input:focus {
+    border-color: var(--primary);
+}
+
+.add_todo input:disabled,
+.add_todo button:disabled {
+    opacity: 0.2;
+}
+
+.add_todo button {
+    height: 100%;
+    padding: 1rem 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 1rem;
+    outline: none;
+
+    border: 1px solid var(--primary);
+    background: var(--primary);
+    color: var(--primary-color);
+}
