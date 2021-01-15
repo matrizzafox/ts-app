@@ -36,7 +36,7 @@ const TodosItem: React.FC<TodosItemProps> = React.memo(({ item, dispatch }): Rea
     const handleUpdateTitle = React.useCallback((e: React.FormEvent<HTMLFormElement> | MouseEvent): void => {
         e.preventDefault()
         const value = edit.value.length === 0 ? title : edit.value
-        setEdit(prev => ({ ...prev, isEditing: false }))
+        setEdit({isEditing: false, value})
         dispatch(updateTodoAction({ ...item, title: value }))
     }, [dispatch, edit.value, item, title])
 
